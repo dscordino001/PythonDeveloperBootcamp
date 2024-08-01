@@ -1,0 +1,94 @@
+Functional Programming
+--------------------------------------------
+- a way to write cleaner code
+- more of a guideline than an absolute rule
+- it is all about packaging code into separate chunks, and it organized in a way that makes sense
+- they also separate data and functions
+- pure functions
+    - given the same input, it will always return the same output
+    - does not have any side effects
+        - things that a function does that affects the outside world
+            - printing on a screen or touching a variable outside of scope
+
+map()
+--------------------------------------------
+- allows for you to run an action on inputted and iterable data
+- map(action, iterableData)
+- format
+    def multiply_by2(item):
+        return item * 2
+    # if you don't use list(), it will return a memory address
+    print(list(map(multiply_by2, [1, 2, 3]))) # [2, 4, 6]
+
+filter()
+--------------------------------------------
+- allows you to filter out data
+- filter(action, iterableData)
+- format
+    def only_odd(item):
+        return item % 2 != 0
+    print(list(filter(only_odd, [1, 2, 3]))) # [1, 3]
+
+zip()
+--------------------------------------------
+- combines two iterables together
+- format
+    print(list(zip([1, 2, 3], [10, 20, 30]))) # [(1, 10), (2, 20), (3, 30)]
+
+reduce()
+--------------------------------------------
+- needs to be imported <from functools import reduce>
+- reduce(function, data, initialAccValue)
+- you don't need the list because it returns a single value
+- format
+    def accumulator(acc, item):
+        print(acc, item)
+        # whatever you return will be the new acc
+        return acc + item
+    print(reduce(accumulator, [1, 2, 3], 0)) # 6
+
+Lambda Expressions
+--------------------------------------------
+- one time anonymous functions that you only use once
+    - because you use them once, you don't need to name them
+- useful for functions that you only use once
+- format: lambda param: action(param)
+    - ex: print(list(map(lambda item: item * 2, [1, 2, 3])))
+
+List Comprehensions
+--------------------------------------------
+- quick way to create a list/set/dictionary instead of looping through a list
+- format: myList = [<param (with optional action)> for <param> in <iterableData> (optional if/for condition)]
+    - ex: myList = [char for char in 'hello']
+- instead of
+myList = []
+for char in 'hello':
+    myList.append(char)
+print(myList)
+
+- you can do this:
+myList = [char for char in 'hello']
+myList2 = [number for number in range(0, 100)]
+myList3 = [num*3 for num in range(0, 100) if num % 2 != 0] # this uses an action on the parameter
+print(myList3)
+
+Set Comprehensions
+--------------------------------------------
+- set comprehension
+    - mySet = {param for param in iterableData} # curly braces used for sets
+- sets only have unique values
+    - ex: mySet = {char for char in 'hello'}
+
+Dictionary Comprehensions
+--------------------------------------------
+- dictionary comprehension
+    - myDict = {key: value(optional action) for key, value in iterableData (optional if/for condition)}
+- key: value can be acted on
+- example
+simpleDict = {'a': 4, 'b': 2}
+myDict = {key: value**2 for key, value in simpleDict.items()}
+
+- if the key and value are the same, you can just use one variable
+- example: item is the key and item*2 is the value
+myDict = {key: key*2 for key in [1,2,3]}
+print(myDict)

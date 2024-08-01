@@ -1,0 +1,53 @@
+Decorators @decorator
+--------------------------------------------
+- functions can be passed around like variables and can be defined inside other functions
+- the supercharge our function by adding extra functionality to a function
+- you put the decorator on top of the function you want to decorate
+- calling the decorator takes away the need to reassign functions to other variables
+- Pattern for simple use = ARGS and KWARGS
+- format:
+def my_decorator(func):
+    def wrap_func(*args, **kwargs):
+        print('********')
+        func(*args, **kwargs)
+        print('********')
+    return wrap_func
+@my_decorator
+def hello(greeting, emoji=':)'):
+    print(greeting, emoji)
+hello('chili')
+
+- this is a decorator pattern. it gives the decorator flexibility via args and kwargs to unpack as much as we want
+- Practical Applications of Decorators
+
+
+Higher Order Functions (HOC)
+--------------------------------------------
+- either is a function that accepts another function as an argument or returns a function
+
+Error Handling
+--------------------------------------------
+- exceptions are errors that will crash your program
+- by wrapping code in a try/except block, you can catch the error and handle it without it crashing the program
+- example:
+try:
+    age = int(input('What is your age? '))
+    print(age)
+except:
+    print('Please enter a number')
+
+- sometimes we do want to stop the code because the error is really bad
+    - you can <raise <Error>> to kill the code
+
+Generators (see generator/main.py)
+--------------------------------------------
+- is a subset of an iterable
+- allow you to generate a sequence of values over time
+- they are more memory efficient than lists
+- keyword = yield . can pause and resume functions. it will come back to the function once next is called
+- keyword = next . will resume the function
+- really useful when calculating large sets of data
+- format
+def generator_function(num):
+    for i in range(num):
+        yield i # do what you want in this block but make sure it gets paused by the yield keyword

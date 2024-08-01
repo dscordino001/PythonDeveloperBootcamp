@@ -1,0 +1,83 @@
+BIG O NOTATION - ASYMTOTIC ANALYSIS
+
+Complexity Chart
+    Excellent - O(log n), O(1)
+    Good - O(n)
+    Fair - O(n log n)
+    Bad - O(n^2)
+    Horrible - O(2^n), O(n!)
+
+    This shows how quickly the runtime grows
+
+What is good code?
+- Readable
+- Scalable. we worry about large inputs. Big O
+
+Runtime - how long it takes to run a certain problem through a function or a task
+Measuring a Big O/efficiency of the code
+- Use timeit in python to time stuff
+- for example
+    - import timeit
+    start = timeit.timeit()
+    print("hello")
+    end = timeit.timeit()
+    print(end - start) 
+- The bigger the array, the longer it takes to run
+- There is a big time difference between searching through a 100 part array and 100000 part array
+- if you run this code on different, you will see that the times will be different. 
+- many factors come into play like the power of the CPU, the amount of memory, how many other apps are open, etc.
+- Big O notation is a way to show what code is faster
+    - as the size of the input grows, how many operations are required to complete the task?
+    - the slower that the code slows down as it grows, the better it is
+
+4 RULES OF BIG O NOTATION
+____________________________________________
+Rule 1: Worst Case
+- always assume the worst case scenario
+- in the finding nemo example, big O only worries about if nemo is at the end
+- so Big O for finding nemo is O(10), not O(4)
+Rule 2: Remove Constant
+- if you calculate the Big O of a function (i.e. O(4 + n/3 + 100), take out the constants
+Rule 3: Different terms for inputs
+- if you have two different inputs, you can't add them together
+- if there are two loops looping over 2 different things, Big O is O(n + m)
+Rule 4: Drop Non-Dominant Terms
+- O(x^2 + 3x + 100 + .5x) = O(x^2)
+- only care about the most dominant term
+
+O(n), O(1) - Linear Time and Constant Time
+____________________________________________
+- n is the number of inputs
+O(1) only takes one step to complete the function
+- no matter how big the input is, it always takes the 1st item
+
+O(n^2) - Quadratic Time
+____________________________________________
+- pretty slow
+- if you have a nested loop, it is O(n^2)
+- whne you see nested looops, you will see multiplication - O(n*n)
+
+O(n!) - Factorial Time)
+____________________________________________
+- adding a nested loop for every interation that we have
+
+3 PILLARS OF PROGRAMMING
+- Readable
+- Speed (Time Complexity - Efficient in Big O)
+- Memory (Space Complexity - Efficient in Big O)
+
+- When a program executes, it remembers via heap (where we assign variables to) or stack (keeps track of function calls)
+- Look at the total size relative to the size of the input and see how many variables and fucntions there are
+- Too much inputs can cause stack overflow
+- Space Complexity is caused by allocations, functions, data structures and variables
+
+SUMMARY
+
+- Big O says what good code is and isn't
+    - it describes the upper bound of your estimates
+- Know how much time and memory code uses
+- Premature optimization is the root of all evil
+	- don't worry about Big O until you need to
+    - it can negatively impact productivity
+- Data needs to be sufficiently big for you to talk about Big O
+- 

@@ -1,0 +1,15 @@
+WHAT ARE COMPANIES LOOKING FOR:
+
+1. Analytic skills
+- how you go from not knowing the answer, to solving the problem
+2. Coding skils
+3. Technical Skills
+- Do you know the fundamentals, pros and cons of different approaches
+4. Communication Skills
+- Can you work well with others
+
+WHAT WE NEED FOR CODING INTERVIEWS
+1. Data Structures
+- Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Heaps, Hash Tables
+2. Algorithms
+- Sorting, Dynamic Programming, BFS + DFS (Searching), Recursion

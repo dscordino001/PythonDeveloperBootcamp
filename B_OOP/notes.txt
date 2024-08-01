@@ -1,0 +1,114 @@
+OBJECT ORIENTED PROGRAMMING
+
+4 Pillars of OOP
+--------------------------------------------
+1. Encapsulation is the binding of data and functions that manipulate that data
+2. Abstraction is the concept of hiding the complex implementation and showing only the necessary features of the object
+3. Inheritance is the process by new objects takes on properties of existing objects
+4. Polymorphism is the ability to write one function or method that works in a variety of different ways
+
+--------------------------------------------
+- see code in main.py
+- you need to use <self> as a parameter in the class methods to access the other methods and attributes of the class
+- Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects",
+	which can contain data, in the form of fields (often known as attributes or properties),
+	and code, in the form of procedures (often known as methods).
+
+__init__ method
+--------------------------------------------
+- gets called every time you instantiate an object
+- you can create safeguards within this constructor to make sure you instantiate the object the proper way
+
+@classmethod Decorators
+--------------------------------------------
+- @classmethod is a decorator that allows you to call a method without instantiating the class
+- format
+    @classmethod/staticmethod
+    def adding_things(cls, param1, param2):
+        return cls('Ted', param1 + param2)
+
+    print(PlayerCharacter.adding_things(2, 3))
+
+- cls is the class that we are referring to in the method. required
+- we can use this class method without instantiating the class
+
+@staticmethod Decorators
+--------------------------------------------
+- @staticmethod is a decorator that allows you to call a method without instantiating the class
+- static method does not have access to cls or self
+- format
+    @staticmethod
+    def adding_things(param1, param2):
+        return param1 + param2
+
+    print(PlayerCharacter.adding_things(2, 3))
+- use this when you don't care about modifying or changing anything in the class
+
+What we have learned
+--------------------------------------------
+- OOP is a way to structure your code
+- classes can be created to store data and methods
+- you can instantiate an object and use __init__ to set up every object
+- you can use @classmethod and @staticmethod to call methods without instantiating the class
+- this creates your own data type that models the real world
+
+Private and Public Variables
+--------------------------------------------
+- only give access to things that the user in concerned about
+- format for a private variable
+    self._name = name
+
+Inheritance
+--------------------------------------------
+- allows you to inherit all the methods and attributes of a parent class
+- see Wizard Game example in main.py
+
+Polymorphism
+--------------------------------------------
+- object classes can share the same method names but can be used in different ways
+- see Wizard Game example in main.py
+
+super()
+--------------------------------------------
+- super() allows you to call the parent class methods
+- format
+    super().__init__(name, power)
+
+Object Introspection
+--------------------------------------------
+- allows you to see what methods and attributes are available to you
+- it gives you all the methods and attributes that are available to you
+- format
+    print(dir(player1))
+
+Dunder Methods
+--------------------------------------------
+- allow you to use python specific functions on objects created through our class
+- see dunder methods in main.py
+
+Multiple Inheritance
+--------------------------------------------
+- allows you to inherit from multiple classes
+- things can get really complicated when you inherit from multiple classes
+- you need to be very careful when using this
+- format
+    class Hybrid(Wizard, Archer):
+        def __init__(self, name, power, arrows):
+            Wizard.__init__(self, name, power)
+            Archer.__init__(self, name, arrows)
+
+Method Resolution Order (MRO)
+--------------------------------------------
+- the order in which python looks for methods and attributes
+class A:
+    num = 10
+class B(A):
+    pass
+class C(A):
+    num = 1
+class D(B, C):
+    pass
+
+print(D.num)
+print(D.mro()) # prints the method resolution order
+- if you try to access D, it will look in B first, then C, then A

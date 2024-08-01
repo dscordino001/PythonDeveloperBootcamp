@@ -1,0 +1,34 @@
+DATA STRUCTURES
+
+Data Structures + Algorithms = Programs
+A data structure is a collection of values.
+Each one is different and is specialized for its own thing
+It's like a file cabinet, you can certain things in certain drawers and they're useful for its own thing 
+	- you don't put your files in a fridge and you don't put your food in a file cabinet
+
+HOW COMPUTERS STORE DATA
+- Variables are stored in Random Access Memory. You lose the data when you turn off the computer.
+	- it's a massive storage area that has shelves with 8 bytes that make an address
+- Storage stores mp3's, mp4's and other files and is permanent
+- The CPU is the brain of the computer and is where the work happens
+	- needs access to RAM and storage
+- The memory controller has individual connections to each of these shelves
+	- accesses it realy fast, you just need to know what shelf you are looking for\
+
+OPERATIONS ON DATA STRUCTURES
+- Insertion
+- Deletion
+- Traversal: access each data item exactly once
+- Searching: What to find location of data in a collection so we know it exists
+- Sorting: Arrange data in a particular order
+- Access: get the data from the data structure
+
+ARRAYS
+- Organize items sequentially one after another
+- simplest and most widely used, with least amount of rules
+- There aer 2 different types of arrays
+	- static and dynamic arrays
+	- static arrays are fixed in size and can't be changed
+	- dynamic arrays can be resized
+
+

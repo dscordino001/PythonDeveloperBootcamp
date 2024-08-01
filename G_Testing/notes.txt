@@ -1,0 +1,4 @@
+Testing in Python
+----------------------------------------
+- You usually have a test file that accompanies your code file
+- import unittest gets the testing library

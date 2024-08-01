@@ -1,0 +1,68 @@
+Modules
+-----------------------------------------------
+- each file is a module
+- when you import functions from another file and run them somewhere else, you create a pycache file
+    - this is a compiled version of the file that is created to speed up the process of importing the file
+    - it is created in the __pycache__ folder
+
+Packages and Importing
+-----------------------------------------------
+- ways to import
+    - import module_name
+    - import module_name as alias
+    - from module_name import function_name
+    - from module_name import function_name as alias
+- you can override existing functions by importing them and then redefining them
+- we need to import these built in modules to use them
+
+__name__ and __main__
+-----------------------------------------------
+- if __name__ == "__main__": is used to check if the file is being run as the main program
+    - the file that is being run that has all of the imports is the main program and is ran with the __main__ name
+    - if it is, the code under the if statement will run
+    - if it is not, the code under the if statement will not run
+
+sys
+-----------------------------------------------
+- sys.argv is a list of command line arguments
+- example
+import sys
+# first cmd line thing is the file name
+first = sys.argv[1]
+second = sys.argv[2]
+print(first, second)
+
+Python Package Index
+-----------------------------------------------
+- pip install command is used to install packages that outside developers have created
+- go to pypi.org to find packages to install
+- check if the standard library has the package you need before installing a new one
+
+
+Useful Modules
+-----------------------------------------------
+collections
+- Counter
+    - used to count the number of times a value appears in a list
+    - print(Counter(list))
+    - returns a dictionary with the value as the key and the number of times it appears as the value
+- defaultdict
+    - allows you to access keys in a dictionary, but you need to get it a callable value
+    - defaultdict(lambda: 5,{'a':1, 'b':2})
+- ordereddict
+    - keeps the order of the keys in the dictionary in the way that you inserted them
+
+datetime
+- datetime
+    - used to get the current date and time
+    - examples
+        - datetime.datetime.now()
+        - datetime.datetime.now().year
+        - datetime.datetime.today()
+- time
+    - time.sleep(seconds)
+        - pauses the program for the number of seconds specified
+- array
+    - needs to have a type code (what type of data is in the array. helps with memory getting better used)
+    - example
+        - array.array('i', [1, 2, 3])

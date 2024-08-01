@@ -1,0 +1,437 @@
+BASICS
+
+Data Types
+--------------------------------------------
+- store and modify information within a daya type
+- Fundamental Types
+	- int and float
+		- integer and floating point number
+		- integer is a whole number
+			- print(type(2+4)) will print out type of int
+			- floating point number is a a decimal point number
+			- print(type(2/4)) prints out type of float
+			- print(2**4) prints out 2 to the power of 4
+			- print(5//4) prints out 5 divided by 4 rounded down
+			- print(5%4) prints out remainder of 5 divided by 4
+			- round(float) prints out rounded number
+			- abs(-20) prints out absolute value of number
+			- print(bin(5)) prints out binary number of 5
+			- you can google the rest from python docs
+		- distinction is important because float takes up a lot more memory
+		- TERM: variables
+			- store information in memory for our programs
+			- constants are always in uppercase
+			- __ are dunder variables. They should be left alone
+			- __name__ is a dunder variable that is used to check if the file is being run as the main file
+
+	- str
+	- bool
+	- list
+	- tuple
+	- set
+	- dict
+
+- Custom Types
+	- Classes 
+
+- Specialized Data Types
+	- Modules
+	- Packages
+	- None
+		- the absence of value
+
+Operator Precedence
+--------------------------------------------
+- different operators have different precedence over others
+	- Math Functions follow PEMDAS
+	- Parentheses, Exponents, Multiplication + Division, Addition + Subtraction
+
+Expressions and Statements
+--------------------------------------------
+- Expressions are a piece of code that produces a value
+- Statements are entire line of code that perform an action
+
+Augmented Assignment Operator
+--------------------------------------------
+- Allows ability to modify a variable without having to reassign it
+- +=, -=, *=, /=, **=, //=, %=
+
+Strings 
+--------------------------------------------
+(str)
+- string is a piece of text
+- can use single or double quotes (<'''> for multi-line strings)
+- String Concatenation
+	- adding strings together
+	- print("Hello" + " " + "World")
+
+Type Conversion
+--------------------------------------------
+- converting one data type to another
+- print(int(str(100))) gets you an int
+
+Escape Sequence
+--------------------------------------------
+- allows you to include special characters in a string
+- \n, \t, \", \', \\ are examples
+
+Formatted Strings
+--------------------------------------------
+- allows you to insert variables into strings
+- name = "John" and print(f"Hello, {name}") prints Hello John
+
+String Indexes
+--------------------------------------------
+- allows you to access a specific character in a string
+- print(name[0]) prints J
+- print(name[-2]) prints h because it starts from the end of the string
+- print(name[::-1]) prints the string backwards
+
+Immutability
+--------------------------------------------
+- strings are immutable and you cannot change it once it's created
+- integers are mutable, so if you reassign an integer, it will change to the new value
+
+Built-in Functions and Methods
+--------------------------------------------
+- functions are built-in and can be used to perform a specific task
+- methods are functions that belong to an object
+- len() stands for the length of an object
+	- len counts from 1, not 0
+- quote.upper() converts the string <quote> to uppercase
+- quote.capitalize() capitalizes the first letter of the string
+
+Booleans
+--------------------------------------------
+(bool) - True or False
+- used to evaluate conditions
+- print(bool(0)) prints False
+
+Lists
+--------------------------------------------
+- lists are ordered sequence of objects of any type
+- lists are a form of array in python
+- List slicing
+	- list[1:3] prints 2nd and 3rd element of the list
+	- list[1:] prints everything from the 2nd element to the end
+- lists are mutable
+	- you can replace elements in a list
+
+Matrix
+--------------------------------------------
+- a way to describe multidimensional lists
+- matrix = [[1,2,3],[4,5,6],[7,8,9]]
+- print(matrix[1][3]) prints 6
+
+List Methods
+--------------------------------------------
+- append(value) adds an element to the end of the list
+- insert(index, value) adds an element to a specific index
+- extend([value(s)]) allows you to make the list something iterable
+- pop(index) and remove(value) removes an element from the list
+- clear() removes all elements from the list
+- index(value) returns the index of the value
+- index(value, startIndex, endIndex) returns the index within the specified range
+- count(value) returns the number of times a value appears in the list
+- sort() sorts the list in ascending order
+	- So does sorted(list), but sorted() returns a new array
+	- list slicing (listOfThings[::-1]) creates a new version
+	- list copying (listOfThings[:]) creates a new version
+- reverse() reverses the list
+
+Common List Patterns
+--------------------------------------------
+- print(list(range(1,100))) prints a list of numbers from 1 to 100
+- .join is a string method that takes iterables and creates a new item 
+- print(", ".join(["a", "b", "c"])) prints a, b, c
+
+List Unpacking
+--------------------------------------------
+- allows you to assign variables to a list
+- a, b, c = [1, 2, 3]
+- a, b, c = [1, 2, 3, 4, 5, 6] will throw an error
+- a, b, c, *other = [1, 2, 3, 4, 5, 6] won't throw an error
+- a, b, c, *other, d = [1, 2, 3, 4, 5, 6] means that d will be 6
+
+None
+--------------------------------------------
+- data type used to represent the absence of value
+
+Dictionaries (dict)
+--------------------------------------------
+- unordered collection of data in key-value pairs
+- dictionaries are mutable
+
+dictionary = {
+	"key": "value",
+	"key2": "value2"
+}
+
+- dictionary["key"] will return value
+
+Dictionary Keys and Methods
+--------------------------------------------
+- keys must be unique, immutable, and hashable
+- keys can be strings, numbers, or tuples
+- dictionary.get("key") will return value if True, None if False
+- dictionary.get("key", "defaultValue") will return defaultValue if False
+- another way to create a dictionary is user = dict(key="value", key2="value2")
+- print("key" in dictionary.keys()) will return True if key exists in dictionary
+- print("value" in dictionary.values()) will return True if value exists in dictionary
+- dictionary.items() will return a list of tuples with key-value pairs
+	- you can use this to see if a key-pair value exists in a dictionary
+- dictionary.clear() will clear the dictionary
+- dictionary.copy() will copy the dictionary
+- dictionary.pop("key") will remove the key-value pair
+- dictionary.update({"key": "value"}) will update the dictionary with a new key-value pair
+- dictionary.popitem() will remove the last key-value pair
+
+Tuples (tuple)
+--------------------------------------------
+- ordered, immutable collection of data that's faster than lists
+- tuples are used for data that shouldn't be changed
+- my_tuple = (1, 2, 3, 4, 5)
+- tuple only has count and index methods
+- tuple unpacking is a thing
+	- a, b, c, *other = (1, 2, 3, 4, 5, 6)
+
+Sets
+--------------------------------------------
+- unordered collection of unique objects
+- sets do not support indexing
+- my_set = {1, 2, 3, 4, 5}
+- my_set2 = {1, 2, 3, 4, 5, 6}
+- print(1 in my_set) will return True
+- print(list(my_set)) will return a list of the set
+- print(my_set.difference(my_set2)) will return the difference between the two sets
+- print(my_set.union(my_set2)) and print(my_set | my_set2) will return the union of the two sets
+- print(my_set.intersection(my_set2)) will return the intersection of the two sets
+- print(my_set.discard(5)) will remove 5 from the set
+- print(my_set.isdisjoint(my_set2)) will return True if the two sets have nothing in common
+- print(my_set.issubset(my_set2)) will return True if my_set is a subset of my_set2
+- print(my_set.issuperset(my_set2)) will return True if my_set is a superset of my_set2
+
+Conditional Logic
+--------------------------------------------
+- if, elif, else conditions
+
+Matrix
+--------------------------------------------
+- a way to describe multidimensional lists
+- matrix = [[1,2,3],[4,5,6],[7,8,9]] is a main array with 3 subarrays
+
+Truthy and Falsy
+--------------------------------------------
+- values that are evaluated as True or False
+- Falsy values are 0, "", [], {}, None, False
+- Truthy values are everything else
+ 
+Ternary Operators
+--------------------------------------------
+- allows you to write a single line of code that performs an action
+- <condition_if_true if condition else condition_if_false>
+- Example: is a user my friend?
+	- is_friend = True
+	- can_message = "message allowed" if is_friend else "not allowed to message"
+	- print(can_message)
+
+Short Circuiting
+--------------------------------------------
+- short circuiting is when the compiler does not have to evaluate the full set of conditions
+
+isFriend = True
+isUser = True
+if isFriend or isUser:
+	print("Best Friends Forever")
+
+- shohrt circuiting can happen with the or operator
+when the 1st condition is True, the 2nd condition is not evaluated
+- you should short circuit your code when possible and put your 
+most likely condition first
+
+Logical Operators
+--------------------------------------------
+- and requires both conditions to be True
+- or requires one condition to be True
+- not inverts the condition
+- greater than and less than operators can be used to compare values
+- == is used to compare values, = is used to assign variables
+
+For Loops
+--------------------------------------------
+- allows you to iterate over a sequence of data
+- for item in list:
+	- print(item)
+
+Iterable
+--------------------------------------------
+- an object that can be iterated over
+- strings, lists, tuples, sets, and dictionaries are all iterable
+
+user = {
+	"name": "Golem",
+	"age": 5006,
+	"can_swim": False
+}
+
+for item in user.items():
+	print(item)
+
+- you can also use tuple unpacking to print out the key-value pairs
+for key, value in user.items():
+	print(key, value) 
+ 
+
+Enumerate
+--------------------------------------------
+- allows you to loop over something and have an automatic counter
+- enumerate wraps around something that supports iteration over
+- it will give you an index counter and the item at that index
+for i, char in enumerate(list(range(100))):
+	print(i, char)
+
+- only print the index of 50
+	if char == 50:
+		print(f"index of 50 is {i}")
+
+While Loops
+--------------------------------------------
+- allows you to loop over a block of code as long as a condition is True/False
+- use a while loop when you don't know how many times you need to loop
+
+break, coontinue, pass
+--------------------------------------------
+- break stops the loop
+- continue skips the current iteration by going back to the top of the loop 
+- pass does nothing
+
+Functions, Arguments, and Parameters
+--------------------------------------------
+- <def functionName():> lets the compiler know that we are about to define a function
+- make sure that you call the function below the definition by writing <functionName()>
+- Functions help you not repeat yourself
+- You can give functions parameters inside of the ()
+- When you call/invoke a function, you give arguments as the actual values to a function
+- keyword arguments allow us to not worry about the positioning of arguments
+	- make sure that your keyword arguments are in order
+- default parameters
+	- allow us to give default argumets inside of the function declaration
+
+
+def my_function(param1, param2="default_value", param3=10):
+    print(f"param1: {param1}")
+    print(f"param2: {param2}")
+    print(f"param3: {param3}")
+
+# Calling the function with arguments
+my_function("Hello", param2="World", param3=20)
+
+# Calling the function with default values
+my_function("Hello")
+
+Return
+--------------------------------------------
+- Functions always have to return something
+- return keyword automatically exits the function
+- return has you exit a function with something outputted to the console
+- A function should do one thing really well and it should return something
+
+Methods and Functions
+--------------------------------------------
+- print(), list(), max(), etc. are functions that python gives us, but we can customize our own
+- methods are functions that belong to an object 
+- called by using the dot notation and needs to be owned by something
+- methods are functions that belong to an object and the methods available depend on the data type
+- .append(), .clear(), .copy(), .count(), .extend(), .index(), .insert(), .pop(), .remove(), .reverse(), .sort()
+- you can build own own methods in classes 
+- Docstrings
+	'''
+	You can add info here about what the function does
+	'''
+	- allows you to write a description of what the function does to the compiler
+	- so when you hover over a function, it tells you what you wrote in the '''
+	- you can also use the help() function to see the docstring
+print(functionName.__doc__)
+	- this will print out the info you typed out in your docstring 
+
+*args and **kwargs
+--------------------------------------------
+- adding a star to your arguments it can accept any number of arguments
+	- *args is a tuple
+
+def super_func(*args):
+	print(args)
+super_func(1,2,3,4,5) # give you a tuple of (1,2,3,4,5)
+
+- if you add two stars, it will accept any number of keyword arguments
+	- **kwargs is a dictionary
+
+def super_func(*args, **kwargs):
+	total = 0
+	for items in kwargs.values():
+		total += items
+	return sum(args) + sum(items in kwargs.values())
+
+	print(super_func(1,2,3,4 num1-5, num2=10))
+
+- Order of parameters: params, *args, default parameters, **kwargs
+
+Walrus Operator :=
+--------------------------------------------
+a = "hellooooooooooooooooooo"
+if (n := len(a)) > 10:
+	print(f"Too long {n} elements")
+
+# while this is true, print n and reassign the value of a to have 1 less letter
+while (n := len(a)) > 1:
+	print(n)
+	a = a[:-1]
+
+- minimizes doing calculations that are similar where you want to do something based on a condition and then calculate that value again
+- := assigns values to variables as part of a larger expression
+- n to whatever the outcome of length a is
+	- n has the value of len(a)
+
+Scope
+--------------------------------------------
+- what variables do I have access to?
+- LEGB Rule
+	- Local, Enclosing, Global, Built-in
+	- Local: variables defined within a function
+	- Enclosing: variables in the local scope of enclosing functions
+	- Global: variables defined at the top level of a module
+	- Built-in: names in the pre-built module
+
+global Keyword
+--------------------------------------------
+- it is not good to have everything as a global variable because:
+	- it can be modified by any function
+	- makes it hard to debug
+	- 
+- global keyword: use the global total variable. not as good as dependency injection
+total = 0
+def count():
+	global total
+	total += 1
+	return total
+
+- we can detach the function from the global variable by passing it as an argument
+total = 0
+def count(total):
+	total += 1f
+	return total
+
+print(count(count(count(total))))
+
+nonlocal 
+--------------------------------------------
+- nonlocal keyword: allows you to modify a variable outside of the local scope but it isnt variable
+- there are only a few cases where you would need this keyword because it can make your code not clean
+def outer():
+	x = "local"
+	def inner():
+		nonlocal x # allows you to jump up to the parent scope and modify the variable
+		x = "nonlocal"
+		print("inner:", x)
+	inner()
+	print("outer:", x)

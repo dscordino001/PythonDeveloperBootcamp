@@ -1,0 +1,31 @@
+DEVELOPER FUNDAMENTALS
+
+1. Don't read the dictionary
+- avoid tendency of learning every little thing about it
+- learn the basics and then learn as you use it
+
+2. Commenting your code
+- write comments to explain EXACTLY what your code does
+
+3. Understanding Data Structures
+- dictionaries hold more data than lists
+- lists are ordered, dictionaries are not
+- as you learn different data structures, you'll learn when to use them
+
+4. What is Good Code?
+- Clean (follows style of best practices)
+- Readable (easy to understand)
+- Predictable (does what you expect it to do)
+- DRY (Don't Repeat Yourself)
+
+5. Test your assumptions
+- when you learn something new, test your understanding of it. so you can explain it to others
+- write code to test your understanding
+- example
+    def run(self)
+        return self
+
+6. Pros and Cons of Libraries
+- need to check if the library is still maintained
+- every time that you add a library, you are adding more data/memory to your project
+-
