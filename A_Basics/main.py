@@ -51,7 +51,7 @@ amazonCart = [
     'sunglasses',
     'toys',
     'grapes'
-]
+] 
 
 amazonCart[0] = 'laptop' # Change the first item in the list to 'laptop'
 newCart = amazonCart[:] # Copy the list and make a new list
