@@ -1,0 +1,7 @@
+Scripting
+--------
+- writing scripts to help you be more porducitve and efficient
+- 
+
+Check out OpenCV
+

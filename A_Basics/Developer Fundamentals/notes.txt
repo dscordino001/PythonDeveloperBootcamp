@@ -28,4 +28,7 @@ DEVELOPER FUNDAMENTALS
 6. Pros and Cons of Libraries
 - need to check if the library is still maintained
 - every time that you add a library, you are adding more data/memory to your project
--
+
+7. Pick the Right Library!
+- when you pick a library, make sure you get the most updated and used library
+- 

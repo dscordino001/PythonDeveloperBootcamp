@@ -1,30 +1,25 @@
-# def do_stuff(num = 0):
-#     try:
-#         if num:
-#             return num + 5
-#         else:
-#             return "Please enter number"
-#     except ValueError as err:
-#         return err
+import random 
 
-import random
 
-def guessNumber(guess, answer):
+def runGuess(guess, answer):
     if 0 < guess < 11:
         if guess == answer:
-            print("You are a genius!")
-            return
+            print("Correct")
+            return True
     else:
-        print("Hey bozo, I said 1~10")
+        print("Guess out of range")
+        return False
 
-if __name__ == '__main__':
-    answer = random.randint(1, 10)
+def main():
+    answer = random.randint(1,10)
     while True:
         try:
-            guess = int(input("Enter a Guess Here | Number 1-10 -> "))
-            if guessNumber(guess, answer):
+            guess = int(input("Input a Number 1-10: "))
+            if (runGuess(guess, answer)) == True:
                 break
         except ValueError:
-            print("Please enter a number")
+            print("Please Enter a Number")
             continue
 
+if __name__ == '__main__':
+    main()
